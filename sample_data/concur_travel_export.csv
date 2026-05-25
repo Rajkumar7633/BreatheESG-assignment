@@ -1,0 +1,19 @@
+Report Name,Report ID,Employee Name,Employee ID,Cost Center,Department,Expense Type,Transaction Date,Amount,Currency,Vendor Name,City From,City To,Miles/KM,Class,Nights,Check In,Check Out
+Q1 2024 Business Travel,EXP-2024-001,Sarah Chen,EMP001,CORP-001,Sales,Airfare,2024-01-22,1850.00,USD,Delta Airlines,JFK,LHR,5540,Economy,0,,
+Q1 2024 Business Travel,EXP-2024-001,Sarah Chen,EMP001,CORP-001,Sales,Hotel,2024-01-22,1280.00,GBP,The Savoy London,,London,,,,4,2024-01-22,2024-01-26
+Q1 2024 Business Travel,EXP-2024-001,Sarah Chen,EMP001,CORP-001,Sales,Taxi,2024-01-26,45.00,GBP,Black Cab,London Heathrow,London City,,,,0,,
+Q1 2024 Business Travel,EXP-2024-002,Marcus Williams,EMP002,ENG-001,Engineering,Airfare,2024-02-08,4200.00,USD,British Airways,JFK,SIN,15351,Business Class,0,,
+Q1 2024 Business Travel,EXP-2024-002,Marcus Williams,EMP002,ENG-001,Engineering,Hotel,2024-02-08,890.00,SGD,Marina Bay Sands,,,,,, 3,2024-02-08,2024-02-11
+Q1 2024 Business Travel,EXP-2024-002,Marcus Williams,EMP002,ENG-001,Engineering,Airfare,2024-02-11,4200.00,USD,British Airways,SIN,JFK,15351,Business Class,0,,
+Q1 2024 Business Travel,EXP-2024-003,Emma Torres,EMP003,MKTG-001,Marketing,Car Rental,2024-03-05,340.00,USD,Hertz,Chicago O'Hare,Chicago,580,,,0,,
+Q1 2024 Business Travel,EXP-2024-003,Emma Torres,EMP003,MKTG-001,Marketing,Airfare,2024-03-12,620.00,USD,American Airlines,ORD,BOS,1600,Economy,0,,
+Q1 2024 Business Travel,EXP-2024-003,Emma Torres,EMP003,MKTG-001,Marketing,Hotel,2024-03-12,380.00,USD,Marriott Boston,,,,,, 2,2024-03-12,2024-03-14
+Q2 2024 Business Travel,EXP-2024-004,David Park,EMP004,FIN-001,Finance,Airfare,2024-04-14,890.00,USD,United Airlines,ORD,LAX,2800,Economy,0,,
+Q2 2024 Business Travel,EXP-2024-004,David Park,EMP004,FIN-001,Finance,Hotel,2024-04-14,420.00,USD,Westin Los Angeles,,,,,, 2,2024-04-14,2024-04-16
+Q2 2024 Business Travel,EXP-2024-005,Priya Sharma,EMP005,CORP-001,Operations,Airfare,2024-04-22,2100.00,USD,Lufthansa,JFK,FRA,6195,Economy,0,,
+Q2 2024 Business Travel,EXP-2024-005,Priya Sharma,EMP005,CORP-001,Operations,Hotel,2024-04-22,560.00,EUR,Marriott Frankfurt,,,,,, 3,2024-04-22,2024-04-25
+Q2 2024 Business Travel,EXP-2024-005,Priya Sharma,EMP005,CORP-001,Operations,Train,2024-04-25,185.00,EUR,Deutsche Bahn,Frankfurt,Munich,400,,,0,,
+Q2 2024 Business Travel,EXP-2024-005,Priya Sharma,EMP005,CORP-001,Operations,Hotel,2024-04-25,480.00,EUR,Marriott Munich,,,,,, 2,2024-04-25,2024-04-27
+Q2 2024 Business Travel,EXP-2024-006,James Liu,EMP006,ENG-001,Engineering,Mileage,2024-04-18,124.00,USD,Personal Vehicle,Chicago,Milwaukee,240,,,0,,
+Q2 2024 Business Travel,EXP-2024-007,Sarah Chen,EMP001,CORP-001,Sales,Airfare,2024-05-06,3200.00,USD,Singapore Airlines,LAX,NRT,8740,Business Class,0,,
+Q2 2024 Business Travel,EXP-2024-007,Sarah Chen,EMP001,CORP-001,Sales,Hotel,2024-05-06,75000.00,JPY,Park Hyatt Tokyo,,,,,, 4,2024-05-06,2024-05-10

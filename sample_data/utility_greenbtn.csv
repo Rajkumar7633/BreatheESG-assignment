@@ -1,0 +1,16 @@
+ServiceCategory,StartDateTime,EndDateTime,ReadingType,Value,Unit,Cost,Currency,MeterID,Facility
+Electricity,2024-01-01T00:00:00Z,2024-01-31T23:59:59Z,Consumption,45820,kWh,5498.40,USD,MTR-NYC-001,New York HQ
+Electricity,2024-01-01T00:00:00Z,2024-01-31T23:59:59Z,Demand,142.5,kW,0,USD,MTR-NYC-001,New York HQ
+Electricity,2024-02-01T00:00:00Z,2024-02-29T23:59:59Z,Consumption,41200,kWh,4944.00,USD,MTR-NYC-001,New York HQ
+Electricity,2024-03-01T00:00:00Z,2024-03-31T23:59:59Z,Consumption,43500,kWh,5220.00,USD,MTR-NYC-001,New York HQ
+Electricity,2024-01-15T00:00:00Z,2024-02-14T23:59:59Z,Consumption,28650,kWh,3437.00,USD,MTR-CHI-001,Chicago Distribution
+Electricity,2024-02-15T00:00:00Z,2024-03-14T23:59:59Z,Consumption,31200,kWh,3744.00,USD,MTR-CHI-001,Chicago Distribution
+Electricity,2024-03-15T00:00:00Z,2024-04-14T23:59:59Z,Consumption,29800,kWh,3576.00,USD,MTR-CHI-001,Chicago Distribution
+Electricity,2024-01-01T00:00:00Z,2024-01-31T23:59:59Z,Consumption,22400,kWh,4635.20,GBP,MTR-LDN-001,London Office
+Electricity,2024-02-01T00:00:00Z,2024-02-29T23:59:59Z,Consumption,19800,kWh,4097.60,GBP,MTR-LDN-001,London Office
+Electricity,2024-03-01T00:00:00Z,2024-03-31T23:59:59Z,Consumption,21100,kWh,4367.60,GBP,MTR-LDN-001,London Office
+Electricity,2024-01-01T00:00:00Z,2024-01-31T23:59:59Z,Consumption,61500,kWh,7380.00,EUR,MTR-HAM-001,Hamburg Manufacturing Plant
+Electricity,2024-02-01T00:00:00Z,2024-02-29T23:59:59Z,Consumption,58200,kWh,6984.00,EUR,MTR-HAM-001,Hamburg Manufacturing Plant
+Electricity,2024-03-01T00:00:00Z,2024-03-31T23:59:59Z,Consumption,64800,kWh,7776.00,EUR,MTR-HAM-001,Hamburg Manufacturing Plant
+Electricity,2024-01-01T00:00:00Z,2024-01-31T23:59:59Z,Consumption,12800,kWh,1996.80,SGD,MTR-SIN-001,Singapore APAC Hub
+Electricity,2024-02-01T00:00:00Z,2024-02-29T23:59:59Z,Consumption,11950,kWh,1864.20,SGD,MTR-SIN-001,Singapore APAC Hub
