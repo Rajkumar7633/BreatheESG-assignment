@@ -38,7 +38,10 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 # Set environment variables (or create .env)
+# Use SQLite for quick local setup:
 export DATABASE_URL=sqlite:///db.sqlite3
+# Or use MySQL if you have a local server / Workbench:
+# export DATABASE_URL=mysql://breathe_db:Raj%4076330Raj@127.0.0.1:3306/breathe_db
 export SECRET_KEY=local-dev-secret
 export DEBUG=True
 export ALLOWED_HOSTS=localhost,127.0.0.1
@@ -67,35 +70,50 @@ Open http://localhost:5173
 
 1. Create a new Railway project
 2. Add a PostgreSQL service
-3. Connect your GitHub repo, set root to `backend/`
+3. Connect your GitHub repo and set the root directory to `backend/`
 4. Add environment variables:
    ```
    SECRET_KEY=<generate with: python -c "import secrets; print(secrets.token_hex(32))">
    DATABASE_URL=<auto-set by Railway PostgreSQL>
    ALLOWED_HOSTS=*.railway.app,localhost
    CORS_ALLOWED_ORIGINS=https://your-frontend.vercel.app
+   DEBUG=False
    ```
-5. Railway runs `Procfile` on deploy: `migrate → seed_demo → gunicorn`
+5. Railway uses the existing `Procfile` during deploy: `release` runs migrations and seed data, then `web` starts Gunicorn.
 
 ### Frontend on Vercel
 
-1. Connect your GitHub repo, set root to `frontend/`
-2. Add environment variable:
+1. Connect your GitHub repo and set the root directory to `frontend/`
+2. Add the environment variable:
    ```
    VITE_API_URL=https://your-backend.up.railway.app/api
    ```
 3. Build command: `npm run build`
 4. Output directory: `dist`
+5. Confirm that the frontend project root is `frontend/` and not the repo root.
+
+## Sample Data6. Confirm the backend is live and responding on `https://<your-backend>.railway.app/api/auth/token/`.
+
+### Frontend on Vercel
+
+1. Connect your GitHub repo and set the root directory to `frontend/`
+2. Add the environment variable:
+   ```
+   VITE_API_URL=https://your-backend.up.railway.app/api
+   ```
+3. Build command: `npm run build`
+4. Output directory: `dist`
+5. If the frontend does not load, confirm that Vercel is using the `frontend/` folder as the project root.
 
 ## Sample Data
 
 Upload these files to test the system:
 
-| File | Source type | What it tests |
-|---|---|---|
-| `sample_data/sap_mm_fuel.csv` | SAP | Fuel combustion, German plant codes, movement types, large outlier |
-| `sample_data/utility_greenbtn.csv` | Utility | Multi-facility, mid-month billing periods, demand row (should skip) |
-| `sample_data/concur_travel_export.csv` | Travel | Flights with IATA codes, hotels, car rental, multi-currency |
+| File                                   | Source type | What it tests                                                       |
+| -------------------------------------- | ----------- | ------------------------------------------------------------------- |
+| `sample_data/sap_mm_fuel.csv`          | SAP         | Fuel combustion, German plant codes, movement types, large outlier  |
+| `sample_data/utility_greenbtn.csv`     | Utility     | Multi-facility, mid-month billing periods, demand row (should skip) |
+| `sample_data/concur_travel_export.csv` | Travel      | Flights with IATA codes, hotels, car rental, multi-currency         |
 
 ## Documentation
 
