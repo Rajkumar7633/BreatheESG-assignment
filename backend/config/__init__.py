@@ -1,3 +1,1 @@
-import pymysql
-
-pymysql.install_as_MySQLdb()
+# PostgreSQL is used in production (Render). No MySQL adapter needed.
