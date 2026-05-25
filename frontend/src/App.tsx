@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { apiClient } from './api/client'
@@ -9,6 +10,24 @@ import Records from './pages/Records'
 import AuditTrail from './pages/AuditTrail'
 import Login from './pages/Login'
 import type { User } from './types'
+
+// ─── Keep-alive ping every 4 minutes to prevent Render free tier sleep ────────
+const BACKEND_URL = import.meta.env.VITE_API_URL?.replace('/api', '') || ''
+const PING_INTERVAL_MS = 4 * 60 * 1000 // 4 minutes
+
+function useKeepAlive() {
+  useEffect(() => {
+    const ping = () => {
+      fetch(`${BACKEND_URL}/`, { method: 'GET', mode: 'no-cors' }).catch(() => {
+        // Silent fail — just keeping the server awake
+      })
+    }
+    ping() // ping immediately on mount
+    const id = setInterval(ping, PING_INTERVAL_MS)
+    return () => clearInterval(id)
+  }, [])
+}
+// ─────────────────────────────────────────────────────────────────────────────
 
 function useCurrentUser() {
   return useQuery<User>({
@@ -46,6 +65,8 @@ function AuthGuard({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  useKeepAlive() // 🏓 ping backend every 4 min to prevent sleep
+
   return (
     <BrowserRouter>
       <Routes>
